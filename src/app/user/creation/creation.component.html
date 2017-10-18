@@ -1,0 +1,70 @@
+
+<div class="creation">
+		<form class="form-horizontal" name="form" #regForm="ngForm">
+			<img src="../../../favicon.ico"/>
+			<div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">头像</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="inputEmail3" placeholder="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="username" placeholder="请输入用户名" [(ngModel)]="user.username" name="username" #stu="ngModel" required="required" minlength="4" pattern="^[a-zA-Z0-9_]*$">
+		    	<div *ngIf="stu.invalid && stu.dirty" class="errorss">
+		    		<div *ngIf="stu.errors.required" >用户名不能为空！</div>
+		    		<div *ngIf="stu.errors.minlength" >用户名长度不能小于4！</div>
+		    		<div *ngIf="stu.errors.pattern" >用户名只能为数字、字母、下划线！</div>
+		    	</div>
+		    </div>
+		  </div>
+		  
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">常用邮箱</label>
+		    <div class="col-sm-10">
+		      <input type="email" class="form-control" id="email" placeholder="常用邮箱" [(ngModel)]="user.email" name="email" pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" #email="ngModel">
+		      	<div *ngIf="email.invalid && email.dirty" class="errorss">
+		    		<div *ngIf="email.errors.pattern">请输入正确邮箱!</div>
+		    	</div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+		    <div class="col-sm-10">
+		      	<input type="password" class="form-control" id="password" placeholder="密码,至少6位"    [(ngModel)]="user.password" name="password" #pwd="ngModel" required="required"
+    			minlength="8" actualLength="^[a-zA-Z0-9]*$">
+    			<div *ngIf="pwd.invalid && pwd.dirty" class="errorss">
+		    		<div *ngIf="pwd.errors.required">密码不能为空！</div>
+		    		<div *ngIf="pwd.errors.minlength">密码长度不能小于8位</div>
+		    		<div *ngIf="pwd.errors.actualLength">密码可使用字母、数字</div>
+		    	</div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">重复密码</label>
+		    <div class="col-sm-10">
+		      <input type="password" class="form-control" id="password2" placeholder="重复密码" [(ngModel)]="user.password2" name="password2" #pwass2="ngModel" required="required">
+		      <div *ngIf="pwass2.invalid && pwass2.dirty || !equal" class="errorss">
+		    		<!--<div *ngIf="pwass2.errors.required">密码不能为空！</div>-->
+		    		<div *ngIf="!equal">密码必须一致！</div>
+		    	</div>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">个人简历</label>
+		    <div class="col-sm-10">
+		      <textarea class="form-control" rows="3" placeholder="个人简历,最多140个字" [(ngModel)]="user.profile" name="profile" required="required"></textarea>
+		    </div>
+		  </div>
+		  
+			
+			
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10" (click)="save()">
+		      <button type="submit" class="btn btn-default" [disabled]="!regForm.form.valid">保存</button>
+		    </div>
+		  </div>
+		</form>
+
+</div>

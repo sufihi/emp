@@ -1,0 +1,39 @@
+
+.mistake{
+	color: orangered;
+	font-size: 13px;
+}
+.usertitle{
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+.panel-primary {
+    border-color: #337ab7;
+    width: 600px;
+    margin: 10% auto;
+}
+.panel{
+	background-color: #4d4949;
+}
+.panel-primary[_ngcontent-c1] {
+    border: none;
+}
+label{
+	color: white;
+}
+.upRing .btn-danger{
+	margin-left: 5px;
+}
+.errorss{
+	color:orangered;
+}
+/*背景*/
+.BG{
+	background-color: #282828;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+}

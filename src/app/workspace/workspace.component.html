@@ -1,0 +1,13 @@
+<div class="content">
+	<div class="my-header">
+		<app-header></app-header>
+	</div>
+	<div class="mian">
+		<div class="my-leftnav">
+			<app-leftnav></app-leftnav>
+		</div>
+		<div class="right-content" [style.height]=scrollHeight>
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>

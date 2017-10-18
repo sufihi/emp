@@ -1,0 +1,21 @@
+.user{
+	width: 100%;
+	height: 100%;
+}
+.userleft{
+	padding:20px 20px;
+}
+.user>div{
+	width: 50%;
+	float: left;
+}
+.userright{
+	
+}
+.userright .panel-body{
+	/*width: 70%;*/
+	margin: 60px auto;
+}
+.userright .panel-body .btn{
+	margin: 10px 5px;
+}

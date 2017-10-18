@@ -1,0 +1,80 @@
+<div class="role" [@flyIn]="flyIn">
+	<form class="form-vertical" role="form">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="input-group ">
+					<input #gb class="form-control" type="text" pInputText size="50" placeholder="用户名/昵称">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<i class="fa fa-search"></i>
+							搜索
+						</button>
+					</span>
+				</div>
+				
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-success" type="button" (click)="creat()">
+					<i class="fa fa-user"></i>
+					创建用户
+				</button>
+				
+			</div>
+			
+		</div>
+	</form>
+	<p-dataTable [value]="jurisdictionApi" [globalFilter]="gb" #dt >
+	    <p-column field="id" header="序号"></p-column>
+	    <p-column field="username" header="用户名"></p-column>
+	    <p-column field="postTime" header="注册时间" ></p-column>
+	    <p-column field="loginTime" header="最后登录"></p-column>
+	    <p-column header="操作">
+	    	<ng-template let-col let-car="rowData"  pTemplate="body">
+		       <a href="javascript:void(0)">
+		       	<i class="fa fa-pencil-square-o" ></i>
+		      </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-unlock-alt" ></i>
+		       </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-unlock" ></i>
+		       </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-user" ></i>
+		       </a>
+		    </ng-template>
+	    	
+	    </p-column>
+	</p-dataTable>
+</div>
+
+<!--------------------------------------------------------------------------------------->
+<!--<table border="1" cellspacing="" cellpadding="" >
+		<tr class="tableTh">
+			<th>序号</th>
+			<th>用户名</th>
+			<th>注册时间</th>
+			<th>最后登录</th>
+			<th>操作</th>
+		</tr>
+		<tr *ngFor="let ro of jurisdictionApi">
+			<td>{{ro.id}}</td>
+			<td>{{ro.username}}</td>
+			<td>{{ro.postTime}}</td>
+			<td>{{ro.loginTime}}</td>
+			<td>
+				<a href="javascript:void(0)">
+		       	<i class="fa fa-pencil-square-o" ></i>
+		      </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-unlock-alt" ></i>
+		       </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-unlock" ></i>
+		       </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-user" ></i>
+		       </a>
+			</td>
+		</tr>
+	</table>-->

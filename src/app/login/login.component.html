@@ -1,0 +1,48 @@
+<div class="panel panel-primary">
+  
+  <div class="panel-body">
+  	<div class="usertitle">Emp-Sufihi</div>
+    <form name="form" #regForm="ngForm">
+    	<label for="user">用户名：</label>
+    	<input text="text" name="user" id="user" [(ngModel)]="userName" #user="ngModel" required="required"
+    		class="form-control" minlength="4" pattern="^[a-zA-Z0-9_]*$"/>
+    		<p class="mistake">{{ mistake }}</p>
+				<!--{{user.errors|json}}-->
+    	<!--<div *ngIf="user.pristine" class="alert alert-info">请输入用户名！</div>-->
+    	<!--表单验证为真：即不通过 && 表单值为空-->
+    	<div *ngIf="user.invalid && user.dirty" class="errorss">
+    		<div *ngIf="user.errors.required" >用户名不能为空！</div>
+    		<div *ngIf="user.errors.minlength" >用户名长度不能小于4！</div>
+    		<div *ngIf="user.errors.pattern" >用户名只能为数字、字母、下划线！</div>
+    	</div>
+    	
+    	<label for="pwd">密码：</label>
+    	<!--{{pwd.errors|json}}-->
+    	<input type="password" name="pwd" id="pwd" class="form-control" [(ngModel)]="passwd" #pwd="ngModel" required="required"
+    			minlength="8" actualLength="^[a-zA-Z0-9]*$"/>
+    			<p></p>
+    	<!--<div *ngIf="pwd.pristine" class="alert alert-info">请输入密码！</div>-->
+    	<div *ngIf="pwd.invalid && pwd.dirty" class="errorss">
+    		<div *ngIf="pwd.errors.required">密码不能为空！</div>
+    		<div *ngIf="pwd.errors.minlength">密码长度不能小于8位</div>
+    		<div *ngIf="pwd.errors.actualLength">密码可使用字母、数字</div>
+    	</div>
+    <div class="checkbox">
+	    <label>
+	      <input type="checkbox">记住我
+	    </label>
+  	</div>
+
+    	<div (click)="login()" class="upRing">
+    			<input type="submit" value="登录"  [disabled]="!regForm.form.valid" class="btn btn-primary pull-left"/>
+    			<input type="submit" value="忘记密码"  [disabled]="!regForm.form.valid" class="btn btn-danger pull-left"/>
+    			<!--(click)="regForm.submit(); regForm.reset()"-->
+    	</div>
+    </form>
+  </div>
+
+</div>
+<!--背景颜色-->
+	<div class="BG" [style.height]=scrollHeight>
+		
+	</div>

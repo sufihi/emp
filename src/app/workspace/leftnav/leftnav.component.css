@@ -1,0 +1,26 @@
+.nav_list{
+	width: 20%;
+	z-index: 99;
+}
+.nav_list ul{
+	top: 60px;
+}
+.layui-nav{
+	height: 100%;
+	width: 15%;
+}
+.layui-nav-item dl{
+	padding-left: 15px;
+}
+.nav_list i{
+	margin-right: 5px;
+}
+.nav_list ul li a{
+	font-size: 12px;
+}
+.nav_list .layui-nav{
+	background-color: #282828;
+}
+dl{
+	margin: 0px;
+}

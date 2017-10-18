@@ -1,0 +1,46 @@
+<!-------------------------->
+<div class="nav_list"> 
+  <ul class="layui-nav layui-nav-tree layui-inline layui-nav-side" lay-filter="test">
+  <li class="layui-nav-item layui-nav-itemed" *ngFor="let m of leftnavApi">
+    <a href="javascript:;"><i class="fa {{m.icon}}"></i>{{m.name}}</a>
+    <dl class="layui-nav-child" style="background-color: inherit !important;">
+      <dd *ngFor="let child of m.children"><a href="javascript:void(0)" [routerLink]='child.route'><i class="fa {{child.icon}}"></i>{{child.name}}</a></dd>
+    </dl>
+  </li>
+</ul>
+</div>
+
+<!---------------------------->
+
+
+<!--<div class="nav_list"> 
+  <ul class="layui-nav layui-nav-tree layui-inline layui-nav-side
+" lay-filter="test">
+  <li class="layui-nav-item layui-nav-itemed">
+    <a href="javascript:;"><i class="icon iconfont icon-home"></i>权限管理</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:void(0)" routerLink="framework"><i class="icon iconfont icon-ren"></i>组织架构</a></dd>
+      <dd><a href="javascript:void(0)" routerLink="manage"><i class="icon iconfont icon-pachong-"></i>用户管理</a></dd>
+      <dd><a href="javascript:void(0)" routerLink="role"><i class="icon iconfont icon-ditie"></i>角色管理</a></dd>
+      <dd><a href="javascript:void(0)" routerLink="jurisdiction"><i class="icon iconfont icon-feiji"></i>权限管理</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item">
+    <a href="javascript:;"><i class="icon iconfont icon-moshubang"></i>内容管理</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:void(0)" routerLink="content/article"><i class="icon iconfont icon-wenzhang"></i>文章管理</a></dd>
+      <dd><a href="javascript:void(0)" routerLink="content/discuss"><i class="icon iconfont icon-bi"></i>评论管理</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item">
+    <a href="javascript:;"><i class="icon iconfont icon-iconfontwrench"></i>系统监控</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:void(0)" routerLink="system/status"><i class="icon iconfont icon-quxiantu"></i>系统状态</a></dd>
+      <dd><a href="javascript:void(0)" routerLink="system/maps"><i class="icon iconfont icon-ditu_"></i>百度地图</a></dd>
+    </dl>
+  </li>
+  
+</ul>
+</div>-->
+	
+

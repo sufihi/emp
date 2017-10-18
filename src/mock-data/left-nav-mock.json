@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "name": "权限管理",
+        "isOpen": false,
+        "icon":"fa-home",
+       "children": [
+            { "name": "组织架构","icon":"fa-male","route":"user/framework"},
+            { "name": "用户管理","icon":"fa-bug","route":"user/manage" },
+            { "name": "角色管理","icon":"fa-bus","route":"user/role" },
+            { "name": "权限管理","icon":"fa-send","route":"user/jurisdiction" }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "内容管理",
+        "isOpen": false,
+        "icon":"fa-magic",
+       "children": [
+            { "name": "文章管理","icon":"fa-mobile","route":"content/article" },
+            { "name": "评论管理","icon":"fa-minus","route":"content/discuss" }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "系统监控",
+        "isOpen": false,
+        "icon":"fa-wrench",
+       "children": [
+            { "name": "系统状态","icon":"fa-line-chart","route":"system/status" },
+            { "name": "百度地图","icon":"fa-map-marker","route":"system/maps" }
+        ]
+    }
+]

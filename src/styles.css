@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "~font-awesome/css/font-awesome.min.css";
+
+/*引入primeng*/
+@import "~primeng/resources/primeng.min.css";
+@import "~primeng/resources/themes/bootstrap/theme.css";
+
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+.weui-cells{margin-top: 0px;}
+.weui-cell{
+	padding: 0px;
+}
+/*body{background-color: #282828;}*/
+.layui-table{
+	margin: 0px;
+	background-color: white;
+}
+.layui-nav-itemed .layui-nav-child{
+	background: #282828;
+}
+.role .ui-datatable .ui-datatable-data tr.ui-datatable-even {
+    background: #ffffff;
+}

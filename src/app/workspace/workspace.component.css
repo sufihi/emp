@@ -1,0 +1,17 @@
+.mian{
+	position: fixed;
+	top: 60px;
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+.right-content{
+	width: 85%;
+	float: right;
+	background-color: white;
+	padding: 20px;
+}
+.my-leftnav{
+	height: 100%;
+	float: left;
+}

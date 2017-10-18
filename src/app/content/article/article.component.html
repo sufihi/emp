@@ -1,0 +1,54 @@
+<div class="role" [@flyIn]="flyIn">
+	<form class="form-vertical" role="form">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="input-group ">
+					<input #gb class="form-control" type="text" pInputText size="50" placeholder="请输入用户名">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<i class="fa fa-search"></i>
+							搜索
+						</button>
+					</span>
+				</div>
+				
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-success" type="button" (click)="creat()">
+					发表文章
+				</button>
+				
+			</div>
+			
+		</div>
+	</form>
+	<table border="1" cellspacing="" cellpadding="">
+		<tr class="tableTh">
+			<th>序号</th>
+			<th>标题</th>
+			<th>作者</th>
+			<th>日期</th>
+			<th>操作</th>
+		</tr>
+		<tr *ngFor="let ro of PostlistApi">
+			<td>{{ro.postId}}</td>
+			<td>{{ro.title}}</td>
+			<td>{{ro.userName}}</td>
+			<td>{{ro.postTime}}</td>
+			<td>
+				<a href="javascript:void(0)">
+		       	<i class="fa fa-pencil-square-o" ></i>
+		        </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-list" ></i>
+		       </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-arrow-up" ></i>
+		       </a>
+		       <a href="javascript:void(0)">
+		       	<i class="fa  fa-times" ></i>
+		       </a>
+			</td>
+		</tr>
+	</table>
+</div>

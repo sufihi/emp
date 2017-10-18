@@ -1,0 +1,38 @@
+<div id="discuss" [@flyIn]="flyIn">
+	<form class="form-vertical" role="form">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="input-group ">
+					<input #gb class="form-control" type="text" pInputText size="50" placeholder="请输入用户名/内容">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<i class="fa fa-search"></i>
+							搜索
+						</button>
+					</span>
+				</div>
+			</div>
+		</div>
+	</form>
+	<table border="1" cellspacing="" cellpadding="">
+		<tr class="tableTh">
+			<th>序号</th>
+			<th>内容</th>
+			<th>用户</th>
+			<th>时间</th>
+			<th>操作</th>
+		</tr>
+		<tr *ngFor="let ro of commentApi">
+			<td>{{ro.postId}}</td>
+			<td>{{ro.content}}</td>
+			<td>{{ro.username}}</td>
+			<td>{{ro.date}}</td>
+			<td>
+				<a href="javascript:void(0)">
+		       		删除
+		        </a>
+		      
+			</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,32 @@
+.header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+.weui-cells{
+	height: 60px;
+}
+.top{background: #282828;color: white;position: fixed;width: 100%;z-index: 99;top: 0;left: 0;}
+
+.weui-cell__bd{
+	font-size: 15px;
+    color: #fff;
+    padding-left: 10px;
+}
+.weui-cell__bd i{
+	margin-left: 15px;
+}
+.weui-cell__ft p span{
+	font-size: 12px;
+	color: white;
+}
+.layui-nav{
+	background-color:#282828 ;
+}
+.layui-nav .layui-nav-child a {
+    text-align: left;
+}
+.layui-nav-child a i{
+	margin-right: 10px;
+}
